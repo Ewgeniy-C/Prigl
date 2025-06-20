@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.8;
+            overflow-x: hidden;
+            color: indigo;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 90%;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            color: darkorange;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: dodgerblue;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            color: darkorange;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        h4 {
+            color: darkorange;
+            margin-bottom: 40px;
+            font-size: 2.3em;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .date {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: darkorange;
+            font-style: italic;
+        }
+
+        .timer {
+            font-size: 1.5em;
+            margin: 25px 0;
+            color: hotpink;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Фоновые изображения для параллакса */
+        #section1 {
+            background-image: url('https://avatars.mds.yandex.net/i?id=c2c4b648f70b34bf65b2404c201c1546da5506ba-3767031-images-thumbs&n=13');
+        }
+
+        #section4 {
+            background-image: url('https://flenovo-park.ru/newsite/wp-content/uploads/2015/08/SHY_2889-HDR.jpg');
+        }
+
+        #section2 {
+            background-image: url('https://avatars.mds.yandex.net/i?id=c2c4b648f70b34bf65b2404c201c1546da5506ba-3767031-images-thumbs&n=13');
+        }
+
+        #section3 {
+            background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            .overlay {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            h4 {
+                font-size: 2.3em;
+            }
+
+            .parallax {
+                background-attachment: scroll;
+            }
+            
+            .timer {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .overlay {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax" id="section1">
+        <div class="overlay">
+            <h1>Евгений и Алёна</h1>
+            <h2>Приглашаем вас разделить с нами радость нашего бракосочетания</h2>  <h4>12 июля 2025 года</p>
+            <h2>Праздничное мероприятие состоится через</h2>
+            <div class="timer" id="timer"></div>
+        </div>
+    </div>
+
+    <div class="parallax" id="section4">
+        <div class="overlay">
+            <h2>Дорогие родные и друзья!</h2>
+            <h3>Мы счастливы сообщить вам о нашем предстоящем бракосочетании, которое состоится <span class="date">12 июля 2025 года</span> в 15:40 по адресу г. Смоленск, ул. Глинки 4, ЗАГС</p>
+            <h3>После церемонии всех гостей ждёт праздничный ужин, танцы и развлекательная программа в 17:30 по адресу д. Фленово, ул. Музейная, ресторан Фленово-парк</h3>
+        </div>
+    </div>
+
+    <div class="parallax" id="section2">
+        <div class="overlay">
+            <h2>Программа мероприятия</h2>
+            <h3>15:40 - г. Смоленск, ул. Глинки 4, ЗАГС - регистрация брака</h3>
+            <h3>16:00 - Фотосессия пары с гостями у ЗАГСа</h3>
+            <h3>16:50 - Трансфер пары и гостей от ЗАГСа к месту празднования</h3>
+            <h3>17:30 - Сбор гостей, фуршет у ресторана Фленово-парк</h3>
+            <h3>18:00 - Начало празднования</h3>
+            <h3>22:30 - Свадебный торт и праздничный салют</h3>
+            <h3>23:00 - Свободная часть вечера, танцы, DJ сет</h3>
+        </div>
+    </div>
+
+    <div class="parallax" id="section3">
+        <div class="overlay">
+            <h2>НАШИ ПОЖЕЛАНИЯ</h2>
+            <h3>Просим гостей не утруждать себя выбором букетов, замените их на подарки в конвертах или на подарочные сертификаты в магазины товаров для дома или электроники и бытовой техники</h3>
+        </div>
+    </div>
+
+    <script>
+        // Таймер обратного отсчёта до 12 июля 2025 года, 16:00
+        const weddingDate = new Date('2025-07-12T16:00:00').getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
+
+            if (diff <= 0) {
+                document.getElementById('timer').innerHTML = "Свадьба началась!";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('timer').innerHTML = 
+                `${days} дней ${hours} часов ${minutes} минут ${seconds} секунд`;
+        }
+
+        // Обновляем таймер каждую секунду
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer(); // Вызываем сразу, чтобы избежать задержки в 1 секунду при загрузке
+    </script>
+</body>
+</html>
